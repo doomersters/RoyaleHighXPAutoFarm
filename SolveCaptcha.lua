@@ -1,5 +1,5 @@
 repeat task.wait() until game:IsLoaded()
-local _ = game:GetService("services.Players").LocalPlayer.Character or game:GetService("services.Players").LocalPlayer.CharacterAdded:Wait()
+local _ = game:GetService("Players").LocalPlayer.Character or game:GetService("Players").LocalPlayer.CharacterAdded:Wait()
 
 local services = setmetatable({},{__index = function(_,serv) return game:GetService(serv) end})
 local localPlayer = services.Players.LocalPlayer
