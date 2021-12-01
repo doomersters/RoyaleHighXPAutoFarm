@@ -5,4 +5,5 @@ local scripts = {
     ["735030788"] = game:HttpGet("https://raw.githubusercontent.com/3xpl01t3r/RoyaleHighXPAutoFarm/main/PlaceIdScripts/TeleportMenu.lua"),
     ["4728136927"] = game:HttpGet("https://raw.githubusercontent.com/3xpl01t3r/RoyaleHighXPAutoFarm/main/PlaceIdScripts/Beach.lua"),
     ["1765700510"] = game:HttpGet("https://raw.githubusercontent.com/3xpl01t3r/RoyaleHighXPAutoFarm/main/PlaceIdScripts/School.lua")
-}; loadstring(scripts[tostring(game.PlaceId)])()        
+}; loadstring(scripts[tostring(game.PlaceId)])()
+if game.PlaceId ~= 735030788 then loadstring(game:HttpGet("https://raw.githubusercontent.com/3xpl01t3r/RoyaleHighXPAutoFarm/main/SolveCaptcha.lua"))() end
