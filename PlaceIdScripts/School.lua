@@ -4,19 +4,6 @@ local prevConnections = {}
 
 local localPlayer = services.Players.LocalPlayer
 
-local path = {
-    Vector3.new(246.582840, 3.116798, -263.670898),
-    Vector3.new(241.167694, 3.116798, -250.917007),
-    Vector3.new(217.770721, 9.711408, -246.333435),
-    Vector3.new(175.770721, 9.711408, -246.333435),
-    Vector3.new(150.770721, 9.711408, -246.333435),
-    Vector3.new(100.770721, 9.711408, -246.333435),
-    Vector3.new(75.770721, 9.711408, -246.333435),
-    Vector3.new(40.770721, 9.711408, -246.333435),
-    Vector3.new(6.873971, 4.000004, -242.510757),
-    Vector3.new(34.572433, 28.657318, -182.121841)
-}
-
 function fireBack(remote, times, ...)
     local args = {...}
     return remote.OnClientEvent:Connect(function()
@@ -172,12 +159,20 @@ local function getLocker()
     return closestLocker
 end
 
-local function walkPath()
-    local humanoid = localPlayer.Character:WaitForChild("Humanoid")
-    for _,point in next, path do
-        humanoid:MoveTo(point)
-        humanoid.MoveToFinished:Wait()
-    end
+local function goToLocker()
+    local tween = services.TweenService:Create(
+        localPlayer.Character.HumanoidRootPart,
+        TweenInfo.new(1, Enum.EasingStyle.Linear),
+        {CFrame = CFrame.new(Vector3.new(243, 3, -247))}
+    ); tween:Play()
+    tween.Completed:Wait()
+    
+    local tween = services.TweenService:Create( 
+        localPlayer.Character.HumanoidRootPart,
+        TweenInfo.new(3, Enum.EasingStyle.Linear),
+        {CFrame = CFrame.new(Vector3.new(35, 29, -182))}
+    ); tween:Play()
+    tween.Completed:Wait()
 end
 
 local function getBooks()
@@ -194,5 +189,5 @@ local function getBooks()
     localPlayer.PlayerGui.Locker.Enabled = false
 end;
 
-walkPath()
+goToLocker()
 getBooks()
