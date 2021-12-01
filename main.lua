@@ -8,6 +8,6 @@ local scripts = {
 }; coroutine.create(coroutine.resume(loadstring(scripts[tostring(game.PlaceId)]))
     
 if game.PlaceId ~= 735030788 then 
-    coroutine.create(coroutine.resume(loadstring(game:HttpGet("https://raw.githubusercontent.com/3xpl01t3r/RoyaleHighXPAutoFarm/main/SolveCaptcha.lua")))
-    coroutine.create(coroutine.resume(loadstring(game:HttpGet("https://raw.githubusercontent.com/3xpl01t3r/RoyaleHighXPAutoFarm/main/AntiAfk.lua")))
+    coroutine.create(coroutine.resume(loadstring(game:HttpGet("https://raw.githubusercontent.com/3xpl01t3r/RoyaleHighXPAutoFarm/main/UtilityScripts/SolveCaptcha.lua")))
+    coroutine.create(coroutine.resume(loadstring(game:HttpGet("https://raw.githubusercontent.com/3xpl01t3r/RoyaleHighXPAutoFarm/main/UtilityScripts/AntiAfk.lua")))
 end
