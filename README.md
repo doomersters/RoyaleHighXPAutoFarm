@@ -1,6 +1,6 @@
 # Read me
 
-**SCRIPTED WITH SYNAPSE FUNCTIONS**  
+**THIS PROJECT IS SCRIPTED WITH SYNAPSE FUNCTIONS**  
 
 step 1.) put main.lua in autoexecute
 step 2.) repeat step one if main.lua is not in autoexecute.
