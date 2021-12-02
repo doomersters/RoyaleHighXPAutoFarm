@@ -1,6 +1,7 @@
 # READ ME
 
 **THIS PROJECT IS SCRIPTED WITH SYNAPSE FUNCTIONS**  
+which means some scripts may not work if your executor doesn't support those.
 
 step 1.) put main.lua in autoexecute  
 step 2.) repeat step one if main.lua is not in autoexecute.
